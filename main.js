@@ -8,8 +8,7 @@ var mouseEvent = "empty";
 
     /*Uncomment the correct line*/
     canvas.addEventListener("mousedown", my_mousedown);
-    canvas.setEventListener("mousedown", my_mousedown);
-    canvas.getEventListener("mousedown", my_mousedown);
+   
 
     function my_mousedown(e)
     {
@@ -24,9 +23,7 @@ var mouseEvent = "empty";
     and call function my_mousemove
     */
     canvas.addEventListener("mousemove", my_mousemove);
-    canvas.setEventListener("mousemove", my_mousemove);
-    canvas.getEventListener("mousemove", my_mousemove);
-    
+   
 
     function my_mousemove(e)
     {
@@ -58,18 +55,20 @@ var mouseEvent = "empty";
    
     function my_mouseup(e){
         mouseEvent = "mouseup"   
-    }
+    
 
     current_position_of_mouse_y = e.clientY - canvas.offsetLeft;
     current_position_of_mouse_y = e.clientY - canvas.offsetRight;
 
     canvas.addEventListener("mouseleave", my_mouseleave);
+    }
 
     function my_mouseup(e){
         mouseEvent = "mouseup"   
-    }
+    
     current_position_of_mouse_y = e.clientY - canvas.offsetLeft;
     current_position_of_mouse_y = e.clientY - canvas.offsetRight;
+    }
 
     /*Create an event listener for "mouseup"
     and call function my_mouseup.
